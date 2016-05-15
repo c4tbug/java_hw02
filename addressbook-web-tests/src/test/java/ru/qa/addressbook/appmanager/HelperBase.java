@@ -4,11 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-/**
- * Created by lero on 5/12/16.
- */
+
 public class HelperBase {
-    protected FirefoxDriver wd;
+    public FirefoxDriver wd;
 
     public HelperBase(FirefoxDriver wd) {
         this.wd = wd;
