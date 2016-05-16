@@ -9,7 +9,7 @@ import ru.qa.addressbook.appmanager.ApplicationManager;
 
 public class TestBase extends ApplicationManager{
 
-    public  ApplicationManager app = new ApplicationManager();
+    public ApplicationManager app = new ApplicationManager();
 
     @BeforeMethod
     public void setUp() throws Exception {
