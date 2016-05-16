@@ -17,6 +17,7 @@ public class ContactHelper extends HelperBase{
     public void returnToHomePage() {
         click(By.xpath("//*[@id='nav']"));
     }
+    public void gotoHomePage () { click(By.xpath ("//*[@id='nav']/ul/li[1]/a"));}
 
     public void submitContactCreation() {
         click(By.xpath("//div[@id='content']/form/input[21]"));
@@ -53,7 +54,4 @@ public class ContactHelper extends HelperBase{
         click(By.name("selected[]"));
     }
 
-    public void gotoContactPage () {
-        click(By.xpath("//*[@id='nav']/ul/li[2]/a"));
-    }
 }

@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class HelperBase {
     public FirefoxDriver wd;
 
-    public HelperBase(FirefoxDriver wd) {
+    public HelperBase (FirefoxDriver wd) {
         this.wd = wd;
     }
 

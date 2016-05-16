@@ -1,6 +1,6 @@
 package ru.qa.addressbook.model;
 
-public class ContactData {
+public class  ContactData {
   private final String name;
   private final String lastname;
   private final String phone;
