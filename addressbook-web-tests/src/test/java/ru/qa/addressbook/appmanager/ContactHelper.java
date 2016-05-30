@@ -3,8 +3,8 @@ package ru.qa.addressbook.appmanager;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.qa.addressbook.model.ContactData;
 
 public class ContactHelper extends HelperBase{
@@ -16,7 +16,7 @@ public class ContactHelper extends HelperBase{
     }
 
     public void returnToHomePage() {
-        click(By.xpath("//*[@id='nav']"));
+        click(By.xpath("//*[@id='logo']"));
     }
     public void gotoHomePage () { click(By.xpath ("//*[@id='nav']/ul/li[1]/a"));}
 
@@ -64,4 +64,22 @@ public class ContactHelper extends HelperBase{
     }
 
 
+    public void createContact(ContactData contact) {
+        initContactCreation();
+        fillContactForm(contact);
+        submitContactCreation();
+        returnToHomePage();
+    }
+
+    public boolean isThereAContact () {
+        return isElementPresent (By.name("selected[]")); }
+
+    private boolean isElementPresent(By locator) {
+        try {
+            wd.findElement(locator);
+            return true;
+        } catch (NoSuchElementException ex) {
+            return false;
+        }
+    }
 }

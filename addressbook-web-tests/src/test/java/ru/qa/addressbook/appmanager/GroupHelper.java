@@ -1,8 +1,8 @@
 package ru.qa.addressbook.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.qa.addressbook.model.GroupData;
 
 
@@ -46,5 +46,25 @@ public class GroupHelper extends HelperBase{
 
     public void submitGroupModification() {
         click(By.name("update"));
+    }
+
+    public void createGroup(GroupData group) {
+        initGroupCreation();
+        fillGroupForm(group);
+        submitGroupCreation();
+        returnToGroupPage();
+    }
+
+    public boolean isThereAGroup() {
+        return isElementPresent (By.name("selected[]"));
+    }
+
+    private boolean isElementPresent(By locator) {
+        try {
+            wd.findElement(locator);
+            return true;
+        } catch (NoSuchElementException ex) {
+return false;
+        }
     }
 }
