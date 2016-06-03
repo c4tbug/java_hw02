@@ -1,15 +1,38 @@
 package ru.qa.addressbook.model;
 
 public class  ContactData {
-  public void setId(int id) {
+
+  private  int id = Integer.MAX_VALUE;
+  private  String name;
+  private  String lastname;
+  private  String phone;
+  private  String mail;
+
+  public ContactData withId(int id) {
     this.id = id;
+    return this;
   }
 
-  private  int id;
-  private final String name;
-  private final String lastname;
-  private final String phone;
-  private final String mail;
+  public ContactData withMail(String mail) {
+    this.mail = mail;
+    return this;
+  }
+
+  public ContactData withPhone(String phone) {
+    this.phone = phone;
+    return this;
+  }
+
+  public ContactData withLastname(String lastname) {
+    this.lastname = lastname;
+    return this;
+  }
+
+  public ContactData withName(String name) {
+    this.name = name;
+    return this;
+  }
+
 
   @Override
   public String toString() {
@@ -31,6 +54,7 @@ public class  ContactData {
 
     ContactData that = (ContactData) o;
 
+    if (id != that.id) return false;
     if (name != null ? !name.equals(that.name) : that.name != null) return false;
     return lastname != null ? lastname.equals(that.lastname) : that.lastname == null;
 
@@ -38,25 +62,10 @@ public class  ContactData {
 
   @Override
   public int hashCode() {
-    int result = name != null ? name.hashCode() : 0;
+    int result = id;
+    result = 31 * result + (name != null ? name.hashCode() : 0);
     result = 31 * result + (lastname != null ? lastname.hashCode() : 0);
     return result;
-  }
-
-  public ContactData(String name, String lastname, String phone, String mail) {
-    this.id = Integer.MAX_VALUE;
-    this.name = name;
-    this.lastname = lastname;
-    this.phone = phone;
-    this.mail = mail;
-  }
-
-  public ContactData(int id, String name, String lastname, String phone, String mail) {
-    this.id = id;
-    this.name = name;
-    this.lastname = lastname;
-    this.phone = phone;
-    this.mail = mail;
   }
 
   public String getName() {

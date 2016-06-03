@@ -5,14 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.BrowserType;
-
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
     WebDriver wd;
 
-    public  ContactHelper contactHelper;
+    public ContactHelper contactHelper;
     public SessionHelper sessionHelper;
     public NavigationHelper navigationHelper;
     public GroupHelper groupHelper;
@@ -29,7 +27,7 @@ public class ApplicationManager {
         } else if (browser.equals(BrowserType.CHROME)) {
             wd = new ChromeDriver();
         }
-        wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        wd.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         wd.get("http://localhost/addressbook/group.php");
         contactHelper = new ContactHelper(wd);
         groupHelper = new GroupHelper(wd);
@@ -46,15 +44,15 @@ public class ApplicationManager {
         wd.quit();
     }
 
-    public GroupHelper getGroupHelper() {
+    public GroupHelper group() {
         return groupHelper;
     }
 
-    public NavigationHelper getNavigationHelper() {
+    public NavigationHelper goTo() {
         return navigationHelper;
     }
 
-    public ContactHelper getContactHelper() {
+    public ContactHelper contact() {
         return contactHelper;
     }
 }
