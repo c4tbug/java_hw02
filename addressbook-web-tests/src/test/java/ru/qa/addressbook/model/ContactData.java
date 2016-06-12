@@ -1,20 +1,49 @@
 package ru.qa.addressbook.model;
 
-public class ContactData {
+import com.google.gson.annotations.Expose;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
+import java.io.File;
+
+@XStreamAlias("contact")
+public class ContactData {
+    @XStreamOmitField
     private int id = Integer.MAX_VALUE;
+    @Expose
     private String name;
+    @Expose
     private String lastname;
+    @Expose
     private String phone;
+    @Expose
     private String mail;
+    @Expose
     private String secondEmail;
+    @Expose
     private String thirdEmail;
+    @Expose
     private String allEmails;
+    @Expose
     private String mobilephone;
+    @Expose
     private String workphone;
     private String allPhones;
+    @Expose
     private String address;
     private String data;
+    private File photo;
+
+
+    public File getPhoto() {
+        return photo;
+    }
+
+    public ContactData withPhoto(File photo) {
+        this.photo = photo;
+        return this;
+    }
+
 
 
     public String getData() {

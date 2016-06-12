@@ -1,0 +1,72 @@
+<list>
+  <contact>
+    <name>name 0</name>
+    <lastname>lastname 0</lastname>
+    <phone>12345 0</phone>
+    <mail>email@test.dd 0</mail>
+    <address>address 0</address>
+  </contact>
+  <contact>
+    <name>name 1</name>
+    <lastname>lastname 1</lastname>
+    <phone>12345 1</phone>
+    <mail>email@test.dd 1</mail>
+    <address>address 1</address>
+  </contact>
+  <contact>
+    <name>name 2</name>
+    <lastname>lastname 2</lastname>
+    <phone>12345 2</phone>
+    <mail>email@test.dd 2</mail>
+    <address>address 2</address>
+  </contact>
+  <contact>
+    <name>name 3</name>
+    <lastname>lastname 3</lastname>
+    <phone>12345 3</phone>
+    <mail>email@test.dd 3</mail>
+    <address>address 3</address>
+  </contact>
+  <contact>
+    <name>name 4</name>
+    <lastname>lastname 4</lastname>
+    <phone>12345 4</phone>
+    <mail>email@test.dd 4</mail>
+    <address>address 4</address>
+  </contact>
+  <contact>
+    <name>name 5</name>
+    <lastname>lastname 5</lastname>
+    <phone>12345 5</phone>
+    <mail>email@test.dd 5</mail>
+    <address>address 5</address>
+  </contact>
+  <contact>
+    <name>name 6</name>
+    <lastname>lastname 6</lastname>
+    <phone>12345 6</phone>
+    <mail>email@test.dd 6</mail>
+    <address>address 6</address>
+  </contact>
+  <contact>
+    <name>name 7</name>
+    <lastname>lastname 7</lastname>
+    <phone>12345 7</phone>
+    <mail>email@test.dd 7</mail>
+    <address>address 7</address>
+  </contact>
+  <contact>
+    <name>name 8</name>
+    <lastname>lastname 8</lastname>
+    <phone>12345 8</phone>
+    <mail>email@test.dd 8</mail>
+    <address>address 8</address>
+  </contact>
+  <contact>
+    <name>name 9</name>
+    <lastname>lastname 9</lastname>
+    <phone>12345 9</phone>
+    <mail>email@test.dd 9</mail>
+    <address>address 9</address>
+  </contact>
+</list>
