@@ -39,6 +39,7 @@ public class ContactHelper extends HelperBase {
         type(By.name("email"), contactData.getMail());
         type(By.name("email2"), contactData.getSecondEmail());
         type(By.name("email3"), contactData.getThirdEmail());
+        attach(By.name("photo"), contactData.getPhoto());
     }
 
     public void type(By locator, String text) {
@@ -48,7 +49,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public void initContactCreation() {
-        click(By.linkText("add new"));
+        click(By.xpath("//*[@id='nav']/ul/li[2]/a"));
     }
 
     public void deleteSelectedContact() {
@@ -62,7 +63,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public void selectContactById(int id) {
-        wd.findElement(By.cssSelector("a[href='edit.php?id=" + id + "']")).click();
+        wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
     }
 
     public void initContactModification() {
